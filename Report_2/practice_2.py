@@ -24,7 +24,6 @@ def main():
             H[i, i + width] = 2 / 16      # h_0,1
             H[i, i + width + 1] = 1 / 16  # h_1,1
     y = np.matmul(H, x)
-    img_blur = np.reshape(y, (height, width)).astype(np.uint8)
 
     noise = np.random.normal(0, 1, y.shape)
     y = np.clip(y + noise, 0, 255).astype(np.uint8)
@@ -34,6 +33,8 @@ def main():
         np.matmul(H.T, y),
     )
     x_estimate = np.clip(x_estimate, 0, 255).astype(np.uint8)
+
+    img_blur = np.reshape(y, (height, width)).astype(np.uint8)
     img_output = np.reshape(x_estimate, (height, width)).astype(np.uint8)
 
     cv2.imshow("img_blur", img_blur)
