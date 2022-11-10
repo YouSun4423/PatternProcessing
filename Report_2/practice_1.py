@@ -11,15 +11,19 @@ def main():
     # 平均化フィルタ、3×3
     img_out_averaging_3 = cv2.blur(img_noisy, (3, 3))
     cv2.imshow("img_out_averaging_3", img_out_averaging_3)
+    cv2.imwrite("out/practice_1/out_averaging_3.bmp", img_out_averaging_3)
     # 平均化フィルタ、5×5
     img_out_averaging_5 = cv2.blur(img_noisy, (5, 5))
     cv2.imshow("img_out_averaging_5", img_out_averaging_5)
+    cv2.imwrite("out/practice_1/out_averaging_5.bmp", img_out_averaging_5)
     # ガウシアンフィルタ、5×5
     img_out_gaussian = cv2.GaussianBlur(img_noisy, (5, 5), 0)
     cv2.imshow("img_out_gaussian", img_out_gaussian)
+    cv2.imwrite("out/practice_1/out_gaussian.bmp", img_out_gaussian)
     # メジアンフィルタ、5×5
-    img_out = cv2.medianBlur(img_noisy, 5)
-    cv2.imshow("img_out", img_out)
+    img_out_median = cv2.medianBlur(img_noisy, 5)
+    cv2.imshow("img_median", img_out_median)
+    cv2.imwrite("out/practice_1/out_median.bmp", img_out_median)
 
     cv2.waitKey()
 
