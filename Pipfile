@@ -9,6 +9,7 @@ opencv-python = "4.6.0.66"
 matplotlib = "3.6.0"
 scikit-learn = "1.1.2"
 scipy = "*"
+sklearn = "*"
 
 [dev-packages]
 flake8 = "*"
