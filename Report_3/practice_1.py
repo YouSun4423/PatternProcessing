@@ -27,6 +27,7 @@ def main():
 
     cv2.rectangle(img_gaussian, top_left, bottom_right, 255, 1)
     cv2.imshow("img_gaussian_rectangle", img_gaussian)
+    cv2.imwrite("out/practice_1/output.bmp", img_gaussian)
 
     cv2.waitKey(0)
 
